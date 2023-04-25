@@ -1,38 +1,813 @@
-.App {
-  text-align: center;
+@font-face {
+    font-family: 'euclid-md';
+    src: url("../src/fonts/Euclid\ Circular\ A\ Medium.ttf");
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+@font-face {
+    font-family: 'euclid-lt';
+    src: url("../src/fonts/Euclid\ Circular\ A\ Light.ttf");
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
+@font-face {
+    font-family: 'euclid';
+    src: url("../src/fonts/Euclid\ Circular\ A\ Medium.ttf");
+}
+
+* {
+    font-family: 'euclid-lt';
+    top: 0;
+    left: 0;
+}
+
+html {
+
+    /* background: linear-gradient(0deg, #8ae595 0%, #dbffdf 100%); */
+    height: 100vh;
+}
+
+/* SIGNUP AND LOGIN PAGES CSS */
+
+.signup-bg {
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    top: 0;
+    height: 100vh;
+    width: 100%;
+    top: 0px;
+}
+
+.notesvault {
+    height: 3rem;
+    background: #fff;
+    padding: 12px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.1);
+}
+
+.Salutation {
+    top: 0;
+}
+
+h1 {
+    text-align: center;
+    /* background: -webkit-linear-gradient(0deg, #8ae595 0%, #dbffdf 100%);
+    -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent; */
+}
+
+.signupcontainer {
+    background-color: white;
+    display: flex;
+    align-items: center;
+    flex-direction: column-reverse;
+    justify-content: space-between;
+    width: 80vw;
+    border-radius: 30px;
+
+}
+
+.signup-img {
+    pointer-events: none;
+    height: 35vh;
+    margin-top: 10px;
+}
+
+.form {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.label-p {
+    display: flex;
+    flex-direction: row;
+    margin-bottom: 5px;
+}
+
+.required {
+    color: red;
+    margin: 0;
+}
+
+.eye {
+    margin-left: -20px;
+}
+
+.input-label {
+    margin: 10px 0;
+}
+
+.input-label input {
+    width: 96%;
+    font-size: 16px;
+    outline: none;
+    border: none;
+    border-bottom: 1px solid #000;
+}
+
+.signup-btn {
+    margin: auto;
+    margin-top: 19px;
+    background: linear-gradient(90deg, #8ae595 0%, #dbffdf 100%);
+    color: #000;
+    padding: 10px 0px;
+    outline: none;
+    border: none;
+    justify-content: center;
+    
+    border-radius: 20px;
+    font-weight: bold;
+    width: 150px;
+}
+
+.signup-btn:disabled{
+    margin-top: 19px;
+    background: linear-gradient(90deg, gray 0%, gray 100%);
+    color: white;
+    padding: 10px 0px;
+    outline: none;
+    border: none;
+    border-radius: 20px;
+    font-weight: bold;
+    width: 150px;
+}
+
+.login-txt {
+    display: flex;
+    justify-content: center;
+    text-align: center;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    text-decoration: none;
+    outline: none;
+    color: rgb(135, 135, 135);
+    font-size: 12px;
+    text-align: center;
+}
+
+.hrl {
+    display: flex;
+    align-items: center;
+    width: 24%;
+    height: 1px;
+    margin-left: 8px;
+    margin-right: 8px;
+    background-color: rgb(135, 135, 135);
+}
+
+.cont {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+}
+
+.form-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+
+/* NAVBAR CSS */
+
+.Navbar {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    position: fixed;
+    width: 100%;
+    align-items: center;
+    background-color: #fff;
+    box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.1);
+    top: 0;
+    z-index: 1;
+    /* justify-content: space-between; */
+}
+
+.nav-logo {
+    height: 45px;
+    margin-left: 10px;
+}
+
+hr {
+    display: none;
+}
+
+/* .hamburger{
+    margin-right: 20px;
+}
+
+.ham-li{
+    list-style: none;
+    height: 2px;
+    width: 25px;
+    background-color: #8ae595;
+    border-radius: 30px;
+}
+.ham-ul{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    height: 20px;
+    margin-top: 10px;
+    margin-bottom: 10px;
+} */
+
+.nav-ul {
+    display: flex;
+    margin: 20px 0px;
+    justify-content: center;
+    flex-direction: row;
+    align-items: center;
+}
+
+.nav-li {
+
+    border: 1px solid transparent;
+    list-style: none;
+    margin: 0px 10px;
+    text-decoration: none;
+
+}
+
+.a {
+    margin-left: -15px;
+    background-color: #8ae595;
+    text-decoration: none;
+    color: white;
+    font-weight: bold;
+    padding: 7px;
+    padding-left: 11px;
+    padding-right: 11px;
+    border-radius: 30px;
+    transition: all 0.3s ease-in-out;
+
+}
+
+.Navbar ul li a:hover {
+
+    background-color: rgb(255, 255, 255);
+    border-radius: 10px;
+    border: 1px solid #8ae595;
+    color: #8ae595;
+
+}
+
+.uls-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    font-size: 12px;
+
+}
+
+.span-qualities {
+    display: flex;
+    align-items: center;
+}
+
+
+
+
+
+/* HOME COMPONENT */
+
+.verified-spans {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    flex-wrap: wrap;
+    margin-top: 30px;
+    margin-bottom: 30px;
+
+}
+
+.home-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    /* margin-top: 80px; */
+}
+
+.check-icon {
+    height: 40px;
+    margin-right: 5px;
+}
+
+.intro {
+    font-size: 12px;
+    width: 80%;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    text-align: center;
+}
+
+/* BUTTONS */
+
+.login {
+    font-size: 18px;
+    margin: 0px 5px 10px 0px;
+    padding: 10px 15px;
+    background-color: white;
+    color: #8ae595;
+    border: 2px solid #8ae595;
+}
+
+.signup {
+    font-size: 18px;
+    margin: 0px 0px 10px 5px;
+    padding: 10px 15px;
+}
+
+.btn-container {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    margin-left: -40px;
+
+}
+
+.white {
+    background-color: white;
+    color: #8ae595;
+    border: 1.5px solid #8ae595;
+}
+
+
+
+/* NOTES.JS */
+
+#Notes-textarea {
+    resize: none;
+    outline: none;
+    border: none;
+    background-color: rgb(241, 240, 240);
+    color: #000;
+}
+
+#Notes-textarea {
+    color: #000;
+    padding: 10px;
+}
+
+.Notes-input {
+
+    outline: none;
+    border: none;
+    border-bottom: 2px solid #8ae595;
+}
+
+.addnoteContainer {
+    display: flex;
+    flex-direction: column;
+    width: 70%;
+    justify-content: center;
+    margin: auto;
+}
+
+.Notescontainer {
+    margin: "";
+    margin-top: 80px;
+}
+
+.yournotes {
+    color: #8ae595;
+    text-shadow: #000 1px 0.5px 0.3px;
+    border-bottom: 3px dashed #8ae595;
+    display: inline-flex;
+    font-size: 35px;
+    margin-left: 100px;
+    margin-top: 50px;
+}
+
+.savednote-container{
+    padding: 10px;
+    min-height: 100px;
+    margin: auto;
+    margin-top: 20px;
+    border-radius: 20px;
+    width: 80%;
+    position: relative;
+    /* z-index: 1; */
+    background-color: #F1F0F0;
+}
+
+.snotes{
+    margin-top: 100px;
+}
+
+
+
+
+/* NotesITEM */
+
+.note-tags{
+    background-color: white;
+    padding: 7px;
+    font-size: 12px;
+    padding-left: 15px;
+    padding-right: 15px;
+    margin: 10px;
+    border-radius: 20px;
+    font-style: italic;
+    font-weight: bold;
+    display: inline-flex;
+}
+
+.note-title{
+    margin: 10px;
+}
+
+.note-description{
+    margin: 10px;
+
+}
+.notes-box{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    
+
+}
+
+/* REACT ICONS */
+
+.react-icons{
+display: flex;
+margin-top: 20px;
+flex-direction: row;
+    z-index: 10;
+justify-content: flex-end;
+
+}
+
+.delete-icon{
+    vertical-align: middle;
+    background-color: #8ae595;
+    padding: 6px;
+    padding-left: 10px;
+    padding-right: 14px;
+    display: flex;
+    margin: 5px;
+    border-radius: 20px;
+    cursor: pointer;
+}
+.edit-icon{
+    vertical-align: middle;
+    background-color: #8ae595;
+    padding: 7px;
+    padding-left: 14px;
+    padding-right: 14px;
+    display: flex;
+    margin: 5px;
+    border-radius: 20px;
+    margin-right: 10px;
+    cursor: pointer;
+}
+
+.icon-text{
+    display: inline-flex;
+    flex-direction: row;
+    align-items: center;
+    margin-left: 3px;
+}
+
+/* ALERT COMPONENT */
+.alert-container{
+    position: fixed;
+    display: flex;
+    justify-content: right;
+    right: 20px;
+}
+.cancel-btn{
+    color: red;
+    margin-top: 2px;
+    margin-right: -20px;
+}
+.Alert{
+    position: relative;
+    text-align: center;
+    margin-top: 70px;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    height: 2.5rem;
+    border-radius: 10px;
+    width: 33%;
+    background-color: #bbf6c2;
+    border:2px solid #8ae595;
+    size:1.5rem;
+}
+.alert-msg{
+    color: darkgreen;
+    font-weight: 600;
+}
+
+
+/* EDITNOTE COMPONENT */
+
+  
+  .Modal {
+    background-color: white;
+    padding: 10px;
+    border-radius: 20px;
+    width: 60%;
+    display: flex;
+    top: 50%;
+    position: absolute;
+    z-index: 70;
+    left: 20%;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
   }
-}
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
-}
 
-.App-link {
-  color: #61dafb;
-}
-
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
+  #etitle {
+    width: 80%;
+    outline: none;
+    background-color: rgb(241, 240, 240);
+    border: none;
+    padding: 10px;
   }
-  to {
-    transform: rotate(360deg);
+
+  #etag {
+    width: 80%;
+    outline: none;
+    background-color: rgb(241, 240, 240);
+    border: none;
+    padding: 10px;
   }
+  
+  #edescription {
+    margin-top: 10px;
+    width: 80%;
+    padding-top: 40px;
+    padding-bottom: 40px;
+    padding-left: 18px;
+    margin-bottom: 10px;
+    background-color: rgb(241, 240, 240);
+    outline: none;
+    border: none;
+  }
+  
+  .edit-btn {
+    margin: 15px;
+    margin-top: 20px;
+    font-size: 18px;
+    padding: 10px 15px;
+    color: white;
+    background-color: #8ae595;
+    border: none;
+    border-radius: 50px;
+  }
+  .edit-btn-cont{
+    display: flex;
+    flex-direction: row;
+  }
+
+  .edit-btn-cancel{
+    background-color: gray;
+    margin: 15px;
+    margin-top: 20px;
+    font-size: 18px;
+    padding: 10px 15px;
+    color: white;
+    /* border: 2px solid #8ae595; */
+    border-radius: 50px;
+  }
+
+  .modal-container{
+    position: fixed;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background-color: #F1F0F0;
+    opacity: 0.8;
+    z-index: 60;
+    overflow-y: hidden;
+    
+  }
+
+
+@media screen and (min-width: 0px) and (max-width: 398px) {
+    .divider {
+        display: none;
+    }
+
+    .signup-btn {
+        width: 100px;
+    }
+
+    .addnoteContainer {
+        width: 80%;
+        margin: auto;
+
+    }
+    .notes-box{
+        display: flex;
+        flex-direction: column;
+        
+    }
+    .edit-btn {
+        font-size: 12px;
+        margin: 5px;
+    margin-top: 20px;
+    /* padding: 10px 15px; */
+    color: white;
+    background-color: #8ae595;
+    border: 2px solid #8ae595;
+    border-radius: 50px;
+    }
+    .edit-btn-cancel{
+        background-color: gray;
+        border: none;
+    }
+
+    .edit-btn-cont{
+        display: flex;
+        flex-direction: row;
+      }
+
+      .cancel-btn{
+       display: none;
+      }
+
+      .Alert{
+    position: fixed;
+    display: flex;
+    width: 95%;
+    margin-left: 7px;
+    justify-content: space-evenly;
 }
+
+
+.alert-msg{
+    font-size: 14px;
+}
+}
+
+@media screen and (min-width: 399px) and (max-width: 600px) {
+    .input-label input {
+        width: 60vw;
+    }
+
+    
+
+    .Notescontainer {
+        display: flex;
+        margin-top: 60px;
+        justify-content: center;
+    }
+
+    .addnoteContainer {
+        width: 80%;
+        margin: auto;
+
+    }
+
+    .signup-img {
+        height: 46vh;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+
+    }
+
+    .divider {
+        display: none;
+    }
+
+    .signupcontainer {
+        margin-top: 80px;
+    }
+    .notes-box{
+        display: flex;
+        flex-direction: column;
+        
+    }
+
+    
+    .Alert{
+        position: fixed;
+        display: flex;
+        width: 85%;
+        margin-left: 26px;
+        justify-content: space-evenly;
+    }
+    
+
+    
+    .alert-msg{
+        font-size: 14px;
+    }
+}
+
+@media screen and (min-width: 470px) and (max-width: 600px){
+    .alert-container{
+        display: flex;
+        margin: auto;
+        justify-content: right;
+        align-items: center;
+    }
+    .Alert{
+        position: fixed;
+        display: flex;
+        width: 75%;
+        
+        justify-content: space-evenly;
+    }
+}
+
+@media screen and (min-width: 601px) and (max-width: 900px) {
+
+    .input-label input {
+        width: 60vw;
+    }
+
+    .signup-img {
+        height: 60vh;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+
+    }
+
+    .divider {
+        display: none;
+    }
+
+    .signupcontainer {
+        margin-top: 80px;
+    }
+
+
+
+}
+
+@media screen and (min-width: 901px) {
+    .form-container {
+        display: flex;
+        flex-direction: row-reverse;
+        justify-content: space-around;
+        margin-top: 80px;
+    }
+
+    .signupcontainer {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 70%;
+    }
+
+    .signup-img {
+        height: 50vh;
+        margin-top: 0;
+    }
+
+    .form-container {
+        width: 90%;
+        margin-top: 0;
+        padding: 10px;
+    }
+
+    form {
+        margin-left: 40px;
+        margin-top: 10px;
+    }
+
+    hr {
+        height: 260px
+    }
+
+
+
+
+}
+
+@media screen and (min-width: 1200px) {
+
+    .signupcontainer {
+        display: flex;
+        padding: 10px;
+        justify-content: center;
+        align-items: center;
+        width: 50%;
+    }
+    .savednote-container{
+        padding: 10px;
+        margin-top: 20px;
+        /* margin-left: 30px; */
+        border-radius: 20px;
+        width: 30%;
+        background-color: #F1F0F0;
+    }
+}
+
