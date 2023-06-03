@@ -1174,8 +1174,6 @@ hr {
         display: none;
     }
 
-   
-
 
     .dropdown-user {
         display: none;
@@ -2582,4 +2580,11 @@ textarea{
 
 cursor{
     color: #8ae595;
+}
+
+@media only screen and (min-width:0px) and (max-width:398px){
+    .links-dropdown{
+        width: 135%;
+       }
+    
 }

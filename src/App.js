@@ -22,7 +22,7 @@ function App() {
 
   const [loading, setLoading] = useState(true);
   const [data, setData] = useState(null);
-
+  
   const router = createBrowserRouter([
     {
       path: "/",
