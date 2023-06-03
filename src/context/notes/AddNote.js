@@ -22,10 +22,12 @@ export default function AddNote(props) {
     setNote({ ...note, [e.target.name]: e.target.value })
   }
 
+ 
+
   
   return (
     <>
-    <Alert messege="Note Has been Added Successfully"/>
+    { alert && <Alert messege="Note Has been Added Successfully"/>}
     <div className="Notescontainer">
       <div className='addnoteContainer'>
         <div style={{ display: 'flex', flexDirection: "row" }}>

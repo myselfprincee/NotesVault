@@ -1,5 +1,5 @@
-import React, { useContext, useState } from "react";
-import img3 from "../images/signup.png";
+import React, { useState } from "react";
+import img3 from "../images/signup.webp";
 import { FaRegEye } from "react-icons/fa";
 import { FaRegEyeSlash } from "react-icons/fa";
 import { Link } from "react-router-dom";
@@ -10,11 +10,11 @@ import Alert from "./Alert";
 export default function Login() {
 
   const [state, setState] = useState(false);
-  useContext(message);
+  const [alert, setAlert] = useState(null);
   const [credentials, setCredentials] = useState({email: "", password: ""});
   const navigate = useNavigate();
-  const [alert, setAlert] = useState({type: ' ', message: ' '});
-  createContext
+  
+  
 
 
 
@@ -24,7 +24,7 @@ export default function Login() {
 
   const handleSubmit = async (e) => {
     e.preventDefault();
-    const response = await fetch(`http://localhost:5000/auth/login`, {
+    const response = await fetch(`${process.env.REACT_APP_DATABASE_URL}/auth/login`, {
       method: "POST",
       headers: {
         "Content-Type": "application/json"
@@ -34,17 +34,15 @@ export default function Login() {
     const json = await response.json();
     console.log(json);
     if (json.success){
-      // the the auth token to local storge
+      // the auth token to local storge
       localStorage.setItem('token', json.authtoken);
-      setAlert({message: 'Success : Logged in successfully!' });
-      console.log(alert.type + "this is alert type")
-      console.log(alert.message  + "this is alert type")
-      console.log(alert + "this is alert")
-      message = "Success : Logged in successfully!";
+      setAlert({ type: 'Success', message: "Logged in successfully"});
       navigate("/notes");
+      // setTimeout(() => setAlert(null), 1000);
       
     }else {
-      setMessage('Error : Invalid Credentials' );
+      setAlert({ type: 'Error', message: 'Invalid Credentials' });
+      setTimeout(() => setAlert(null), 1000);
     }
   };
 
@@ -61,7 +59,7 @@ export default function Login() {
       <div className="signup-bg">
         <div className="signupcontainer" style={{ marginTop: `10px` }}>
           <div className="form-container">
-            <img className="signup-img" src={img3} alt="" />
+            <img className="signup-img" src={img3} rel='preload' loading='lazy' alt=" a girl reading notes" />
             <hr className="divider" />
             <form className="form" onSubmit={handleSubmit}>
               <div className="input-label">

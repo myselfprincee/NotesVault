@@ -3,17 +3,25 @@ import Navbar from '../../components/Navbar';
 import { NoteContext } from '../../components/Notes'
 import { useEffect } from 'react';
 import Noteitem from '../../components/Noteitem'
+import { useNavigate } from 'react-router-dom';
 import AddNote from './AddNote';
+// import { keyboard } from '@testing-library/user-event/dist/keyboard';
 // import EditNote from '../../components/EditNote'
 
 export default function NoteState(props) {
   const context = React.useContext(NoteContext);
   const { notes, getNotes , editNote} = context;
   const {showAlert} = props;
+  const navigate = useNavigate();
 
 
   useEffect(() => {
-    getNotes()
+    if(localStorage.getItem("token")){
+      getNotes()
+    }
+    else{
+      navigate("/login")
+    }
     // eslint-disable-next-line
   }, []);
 
@@ -50,32 +58,48 @@ export default function NoteState(props) {
 
   // it has temporary solved re-render problem by including autoFocus it is not a best practice we will fix it later... 
   const handleFocus = (e) => {
-    setFocusedInput(e.target.name);
+    setFocusedInput(e.target.name );
   };
 
-
+  
   const MyModal = () => {
 
     useEffect(() => {
       document.body.style.overflowY = "hidden";
-      return () => { document.body.style.overflowY = "scroll"; }
+      return () => { document.body.style.overflowY = "scroll"; 
+    }
     }, [])
 
 
 
 
+
+
     return (
+      // <>
+      //   <dialog className="Modal">
+      //     <h3>Edit Note</h3>
+      //     <input id="etitle" className='ip' type="text" name='etitle' value={note.etitle} onChange={onChange} onFocus={handleFocus} autoFocus={focusedInput === "etitle"} minLength={3} required/>
+      //     <input id="edescription" className='ip' type="text" name='edescription' value={note.edescription} onChange={onChange} onFocus={handleFocus} autoFocus={focusedInput === "edescription"} minLength={5} required/>
+      //     <input id="etag" className='ip' type="text" name='etag' value={note.etag} onChange={onChange} onFocus={handleFocus} autoFocus={focusedInput === "etag"} />
+      //     <div className='edit-btn-cont'>
+      //       <button id="edit-save" className="edit-btn" onClick={handleClick}>Save Changes</button>
+      //       <button className="edit-btn edit-btn-cancel " onClick={removenote} >Cancel</button>
+      //     </div>
+      //   </dialog>
+      //   <div className='modal-container'></div>
+      // </>
       <>
-        <div className="Modal">
+        <dialog className="Modal">
           <h3>Edit Note</h3>
-          <input id="etitle" className='ip' type="text" name='etitle' value={note.etitle} onChange={onChange} onFocus={handleFocus} autoFocus={focusedInput === "etitle"} minLength={3} required/>
+          <input id="etitle" className='ip' type="text" name='etitle' value={note.etitle} onChange={onChange} onFocus={handleFocus} autoFocus={focusedInput === "etitle"} minLength={5} required/>
           <input id="edescription" className='ip' type="text" name='edescription' value={note.edescription} onChange={onChange} onFocus={handleFocus} autoFocus={focusedInput === "edescription"} minLength={5} required/>
           <input id="etag" className='ip' type="text" name='etag' value={note.etag} onChange={onChange} onFocus={handleFocus} autoFocus={focusedInput === "etag"} />
           <div className='edit-btn-cont'>
             <button id="edit-save" className="edit-btn" onClick={handleClick}>Save Changes</button>
             <button className="edit-btn edit-btn-cancel " onClick={removenote} >Cancel</button>
           </div>
-        </div>
+        </dialog>
         <div className='modal-container'></div>
       </>
     )

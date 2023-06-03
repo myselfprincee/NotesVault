@@ -12,7 +12,7 @@ export default function Noteitem(props) {
   return (
         <div className='savednote-container'>
             <h3 className='note-title'>{note.title}</h3>
-            <p className='note-description'>{note.description}</p>
+            <pre className='note-description'>{note.description}</pre>  
             <p className='note-tags'>{note.tag}</p>
             <div  className="react-icons">
             <div  className="delete-icon" onClick={()=>{deleteNote(note._id)}}>

@@ -4,7 +4,11 @@ export default function ErrorPage() {
   const error = useRouteError();
   console.error(error);
 
+
+
   return (
-   <p>Error 404</p>
+   <p>
+      
+   </p>
   );
 }

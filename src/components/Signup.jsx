@@ -1,5 +1,5 @@
 import React , {useState} from 'react'
-import img3 from '../images/signup.png'
+import img3 from '../images/signup.webp'
 import { FaRegEye } from "react-icons/fa";
 import { FaRegEyeSlash } from "react-icons/fa";
 import { useNavigate } from 'react-router-dom';
@@ -23,10 +23,9 @@ export default function Signup(props) {
     let methoddisplay = props.methoddisplay;
     let methoddisplay2 = props.methoddisplay2;
 
-
     const handleRegister = async (e) => {
       e.preventDefault();
-      const response = await fetch(`http://localhost:5000/auth/register`, {
+      const response = await fetch(`${process.env.REACT_APP_DATABASE_URL}/auth/register`, {
         method: "POST",
         headers: {
           "Content-Type": "application/json"
@@ -38,11 +37,13 @@ export default function Signup(props) {
       if (json.success){
         // the the auth token to local storge
         localStorage.setItem('token', json.authtoken)
-        setAlert({type: 'Success', message: 'Signed Up Successfully' });
+        setAlert({ type: 'Success', message: 'Account has been created Successfully' });
+        setTimeout(() => setAlert(null), 1000);
         navigate("/notes");
 
       }else {
-        setAlert({type: 'Danger', message: 'Invalid Credentials' });
+        setAlert({ type: 'Error', message: 'Invalid Credentials' });
+        setTimeout(() => setAlert(null), 1000);
       }
     };
 
@@ -59,7 +60,7 @@ export default function Signup(props) {
     <div className='signup-bg'>
     <div className='signupcontainer' style={{marginTop:`${methoddisplay2}`}}>
       <div className='form-container'>
-        <img className='signup-img' src={img3} alt=""/>
+        <img className='signup-img' src={img3} rel='preload' loading='lazy' alt=" a girl reading notes"/>
         <hr className='divider'/>
         <form className='form' onSubmit={handleRegister}>
 

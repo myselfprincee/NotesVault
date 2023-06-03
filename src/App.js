@@ -1,21 +1,27 @@
 import './App.css';
+import Loader from './components/Loader';
+import axios from 'axios';
 import {
   createBrowserRouter,
-  RouterProvider,
+  RouterProvider, Routes, Route
 } from "react-router-dom";
-// import Home from './components/Home';
 import About from './components/About';
 import Contact from './components/Contact';
 import ErrorPage from './components/error-page';
-// import Footer from './components/Footer';
 import Login from './components/Login';
 import Signup from './components/Signup';
 import Home from './components/Home';
 import Notes from './components/Notes';
+import Navbar from './components/Navbar';
+import Footer from './components/Footer';
+import { useEffect, useState } from 'react';
 
-function App(props) {
-  // const [alert, setAlert] = useState({type: '', message: ''});
 
+
+function App() {
+
+  const [loading, setLoading] = useState(true);
+  const [data, setData] = useState(null);
 
   const router = createBrowserRouter([
     {
@@ -37,7 +43,7 @@ function App(props) {
     },
     {
       path: "/login",
-      element: <Login/>,
+      element: <Login />,
     },
     {
       path: "/signup",
@@ -45,13 +51,43 @@ function App(props) {
     }
   ]);
 
+  useEffect(() => {
+    const fetchData = async () => {
+      try {
+        // Make the API call here
+        const response = await axios.get(process.env.REACT_APP_DATABASE_URL);
+        setData(response.data);
+        setLoading(false);
+      } catch (error) {
+        // Handle any errors
+        console.error('Error fetching data:', error);
+        setLoading(false);
+      }
+    };
+
+    fetchData();
+  }, []);
+
 
   return (
     <>
-      <RouterProvider router={router} />
+      {loading ? <Loader rel="preload" loading="eager"/> : (
+        <RouterProvider router={router} rel="preload" >
+          <Navbar />
+          <Routes>
+            <Route path="/" exact component={Home} />
+            <Route path="/about" exact component={About} />
+            <Route path="/contact-us" exact component={Contact} />
+            <Route path="/login" exact component={Login} />
+            <Route path="/signup" exact component={Signup} />
+            <Route path="/notes" exact component={Notes} />
+            <Route path="*" exact component={ErrorPage} />
+          </Routes>
+          <Footer />
+        </RouterProvider> )};
+      
     </>
-
-  )
+  );
 }
 
 export default App;
