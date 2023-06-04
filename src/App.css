@@ -1291,9 +1291,6 @@ hr {
         margin-top: 80px;
     }
 
-    .addnoteContainer {
-        margin-top: 5rem;
-    }
 
 
 }
@@ -2497,4 +2494,9 @@ textarea {
 
 cursor {
     color: #8ae595;
+}
+
+
+.addnoteContainer {
+    margin-top: 5rem;
 }
