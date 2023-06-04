@@ -55,6 +55,7 @@ const Navbar = () => {
             <ul className='links-dropdown'>
               <Link to="/contact-us">Wanna Talk! Contact Me</Link>
               <Link to="/about" className='contact'>About The Creator</Link>
+              {!localStorage.getItem("token") ? <Link to="/notes">Your Notes</Link>: "style=display:none"}
             </ul>
           </div>
 
