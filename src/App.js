@@ -22,7 +22,7 @@ function App() {
 
   const [loading, setLoading] = useState(true);
   const [data, setData] = useState(null);
-  
+
   const router = createBrowserRouter([
     {
       path: "/",
@@ -84,7 +84,8 @@ function App() {
             <Route path="*" exact component={ErrorPage} />
           </Routes>
           <Footer />
-        </RouterProvider> )};
+        </RouterProvider>
+        )}
       
     </>
   );

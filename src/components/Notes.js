@@ -7,7 +7,7 @@ export const NoteContext = React.createContext()
 
 export default function About() {;
 
-  const OriginalUrl = process.env.REACT_APP_DATABASE_URL;
+  const OriginalUrl = process.env.REACT_APP_DATABASE_URL
 
   const notesInitial = []
 
