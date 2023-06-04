@@ -71,8 +71,10 @@ function App() {
 
   return (
     <>
-      {loading ? <Loader rel="preload" loading="eager"/> : (
-        <RouterProvider router={router} rel="preload" >
+      {loading ? (
+        <Loader />
+      ) : (
+        <RouterProvider router={router} rel="preload">
           <Navbar />
           <Routes>
             <Route path="/" exact component={Home} />
@@ -85,8 +87,7 @@ function App() {
           </Routes>
           <Footer />
         </RouterProvider>
-        )}
-      
+      )}
     </>
   );
 }

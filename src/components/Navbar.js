@@ -55,7 +55,7 @@ const Navbar = () => {
             <ul className='links-dropdown'>
               <Link to="/contact-us">Wanna Talk! Contact Me</Link>
               <Link to="/about" className='contact'>About The Creator</Link>
-              {!localStorage.getItem("token") ? <Link to="/notes">Your Notes</Link>: "style=display:none"}
+              <Link to="/notes" style={{marginTop:"0.5rem"}}>GO to Notes Page</Link>
             </ul>
           </div>
 
