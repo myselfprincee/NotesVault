@@ -1210,7 +1210,6 @@ hr {
 
     .addnoteContainer {
         width: 80%;
-        margin: auto;
 
     }
 
@@ -2427,7 +2426,7 @@ hr {
 
 @media screen and (min-width: 0px) and (max-width: 398px) {
     .links-dropdown {
-        width: 185%;
+        width: 135%;
         font-size: 13px;
     }
 
