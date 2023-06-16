@@ -36,8 +36,8 @@ export default function Login() {
     if (json.success){
       // the auth token to local storge
       localStorage.setItem('token', json.authtoken);
-      setAlert({ type: 'Success', message: "Logged in successfully"});
       navigate("/notes");
+      setAlert({ type: 'Success', message: "Logged in successfully"});
       // setTimeout(() => setAlert(null), 1000);
       
     }else {
