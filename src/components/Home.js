@@ -22,12 +22,18 @@ import iphone from "../images/iphone notesvault.webp";
 import macbook from "../images/laptop version.webp";
 import facepalming from "../images/man facepalming.png";
 import check from "../images/checkok.png"
+import { Helmet } from 'react-helmet-async';
 
 
 const Home = () => {
 
   return (
     <>
+    <Helmet>
+      <title>Home - notesVault.tk</title>
+      <meta name='description' content='Discover Notesvault' />
+      <link rel="canonical" href="/" />
+    </Helmet>
       <Navbar />
       {/* <Alert/> */}
       <div className='home-container'>

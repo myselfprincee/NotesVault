@@ -5,8 +5,7 @@ import { useEffect } from 'react';
 import Noteitem from '../../components/Noteitem'
 import { useNavigate } from 'react-router-dom';
 import AddNote from './AddNote';
-// import { keyboard } from '@testing-library/user-event/dist/keyboard';
-// import EditNote from '../../components/EditNote'
+import { Helmet } from 'react-helmet-async';
 
 export default function NoteState(props) {
   const context = React.useContext(NoteContext);
@@ -109,6 +108,11 @@ export default function NoteState(props) {
   
   return (
     <>
+    <Helmet>
+      <title>Access your Notes</title>
+      <meta name='description' content='Access your Notes without any hassle' />
+      <link rel="canonical" href="/notes" />
+    </Helmet>
       <Navbar />
       <AddNote note={note} showAlert={showAlert}/>
       {modal && <MyModal />}

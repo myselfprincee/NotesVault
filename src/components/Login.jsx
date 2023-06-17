@@ -6,6 +6,7 @@ import { Link } from "react-router-dom";
 import { useNavigate } from 'react-router-dom';
 import Navbar from "./Navbar";
 import Alert from "./Alert";
+import { Helmet } from "react-helmet-async";
 
 export default function Login() {
 
@@ -53,6 +54,11 @@ export default function Login() {
   return (
     <>
       {/* <Signup method="Login" ormethod="SIGNUP" methodlink="/signup" methoddisplay="none" onSubmit={handleSubmit}/> */}
+      <Helmet>
+      <title>Login - notesVault.tk</title>
+      <meta name='description' content='Registered User - Login Now and access your notes !' />
+      <link rel="canonical" href="/login" />
+    </Helmet>
       <Navbar/>
       
       {alert && <Alert type={alert.type} message={alert.message} />}

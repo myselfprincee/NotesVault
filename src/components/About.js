@@ -2,10 +2,16 @@ import React from 'react'
 import Navbar from './Navbar'
 import Footer from './Footer'
 import creator from "../images/myimage.jpg"
+import { Helmet } from 'react-helmet-async'
 
 export default function About() {
   return (
     <>
+    <Helmet>
+      <title>About - notesVault.tk</title>
+      <meta name='description' content='About the Maker of The Notesvault' />
+      <link rel="canonical" href="/about" />
+    </Helmet>
       <Navbar />
       <div className='About-container'>
           <h2 className='Aboutme-heading'>About Me </h2>
