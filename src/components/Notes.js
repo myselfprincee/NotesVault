@@ -13,9 +13,12 @@ export default function About() {;
 
   const [notes, setNotes] = React.useState(notesInitial);
   const [alert, setAlert] = React.useState(null);
+  const [loading, setLoading] = useState(true);
    
 
   //get all notes 
+
+  
   const getNotes = async () => {
     //API CALL
     const response = await fetch(`${OriginalUrl}/notes/allnotes`, {
@@ -30,6 +33,10 @@ export default function About() {;
       setNotes(json)
     
     }
+
+    {loading ? (
+      <Loader />
+    ) : ( getNotes() )
 
 
 
