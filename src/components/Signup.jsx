@@ -60,7 +60,7 @@ export default function Signup(props) {
     <div className='signup-bg'>
     <div className='signupcontainer' style={{marginTop:`${methoddisplay2}`}}>
       <div className='form-container'>
-        <img className='signup-img' src={img3} rel='preload' loading='lazy' alt=" a girl reading notes"/>
+        <img className='signup-img' src={img3} loading='eager' alt=" a girl reading notes"/>
         <hr className='divider'/>
         <form className='form' onSubmit={handleRegister}>
 

@@ -113,7 +113,7 @@ export default function NoteState(props) {
       <AddNote note={note} showAlert={showAlert}/>
       {modal && <MyModal />}
       <h1 className='yournotes'>Your Notes</h1>
-      <p style={{textAlign: "center"}}>{notes.length === 0 && "No notes to display you can add One in just few seconds.."}</p>
+      <p style={{textAlign: "center"}}>{notes.length === 0 && <div style={{margin:"10px"}}>No notes to display you can add One in just few seconds..</div>}</p>
       <div className='notes-box'>
         {notes.map((note) => {
           return <Noteitem key={note._id} updateNote={updateNote} note={note} />

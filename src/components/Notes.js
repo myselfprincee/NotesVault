@@ -13,7 +13,6 @@ export default function About() {;
 
   const [notes, setNotes] = React.useState(notesInitial);
   const [alert, setAlert] = React.useState(null);
-  const [loading, setLoading] = useState(true);
    
 
   //get all notes 
@@ -33,11 +32,6 @@ export default function About() {;
       setNotes(json)
     
     }
-
-    {loading ? (
-      <Loader />
-    ) : ( getNotes() )
-
 
 
   //ADD NOTE

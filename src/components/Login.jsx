@@ -59,7 +59,7 @@ export default function Login() {
       <div className="signup-bg">
         <div className="signupcontainer" style={{ marginTop: `10px` }}>
           <div className="form-container">
-            <img className="signup-img" src={img3} rel='preload' loading='lazy' alt=" a girl reading notes" />
+            <img className="signup-img" src={img3} loading='eager' alt=" a girl reading notes" />
             <hr className="divider" />
             <form className="form" onSubmit={handleSubmit}>
               <div className="input-label">
