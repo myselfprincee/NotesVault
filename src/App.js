@@ -89,9 +89,9 @@ function App() {
           <Footer />
         </RouterProvider>       
       )}
-      <Analytics mode={'production'} />;
+      <Analytics mode={'production'} />
     </>
-  );
+  )
 }
 
-export default App;
+export default App
