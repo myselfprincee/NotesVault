@@ -15,6 +15,7 @@ import Notes from './components/Notes';
 import Navbar from './components/Navbar';
 import Footer from './components/Footer';
 import { useEffect, useState } from 'react';
+import { Analytics } from '@vercel/analytics/react';
 
 
 
@@ -86,8 +87,9 @@ function App() {
             <Route path="*" exact component={ErrorPage} />
           </Routes>
           <Footer />
-        </RouterProvider>
+        </RouterProvider>       
       )}
+      <Analytics mode={'production'} />;
     </>
   );
 }
