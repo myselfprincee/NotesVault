@@ -1,5 +1,4 @@
 import './App.css';
-import Loader from './components/Loader';
 import axios from 'axios';
 import {
   createBrowserRouter,
@@ -72,9 +71,6 @@ function App() {
 
   return (
     <>
-      {loading ? (
-        <Loader />
-      ) : (
         <RouterProvider router={router} rel="preload">
           <Navbar />
           <Routes>
@@ -87,8 +83,8 @@ function App() {
             <Route path="*" exact component={ErrorPage} />
           </Routes>
           <Footer />
-        </RouterProvider>       
-      )}
+        </RouterProvider>   
+
       <Analytics mode={'production'} />
     </>
   )
