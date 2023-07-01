@@ -13,15 +13,16 @@ import Home from './components/Home';
 import Notes from './components/Notes';
 import Navbar from './components/Navbar';
 import Footer from './components/Footer';
-import { useEffect, useState } from 'react';
+import { useEffect } from 'react';
+// import {  useState } from 'react';
 import { Analytics } from '@vercel/analytics/react';
 
 
 
 function App() {
 
-  const [loading, setLoading] = useState(true);
-  const [data, setData] = useState(null);
+  // const [loading, setLoading] = useState(true);
+  // const [data, setData] = useState(null);
 
   const router = createBrowserRouter([
     {
@@ -50,23 +51,6 @@ function App() {
       element: <Signup method="Signup" ormethod="LOGIN" methodlink="/login" methoddisplay2="40px" />,
     }
   ]);
-
-  useEffect(() => {
-    const fetchData = async () => {
-      try {
-        // Make the API call here
-        const response = await axios.get(process.env.REACT_APP_DATABASE_URL);
-        setData(response.data);
-        setLoading(false);
-      } catch (error) {
-        // Handle any errors
-        console.error('Error fetching data:', error);
-        setLoading(false);
-      }
-    };
-
-    fetchData();
-  }, []);
 
 
   return (
