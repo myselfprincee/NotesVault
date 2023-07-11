@@ -14,6 +14,19 @@ const Navbar = () => {
   let location = useLocation();
   const navigate = useNavigate();
   const [userDetails, setUserDetails] = React.useState(null);
+  const [windowWidth, setWindowWidth] = React.useState(window.innerWidth);
+
+  useEffect(() => {
+    const handleResize = () => {
+      setWindowWidth(window.innerWidth);
+    };
+
+    window.addEventListener('resize', handleResize);
+
+    return () => {
+      window.removeEventListener('resize', handleResize);
+    };
+  }, []);
 
   const handleLogout = () => {
     localStorage.removeItem("token");
@@ -37,6 +50,15 @@ const Navbar = () => {
 
   useEffect(() => {
   }, [location]);
+
+
+  const currentPath = window.location.pathname;
+  const hideElement_login = currentPath === "/login" && windowWidth < 400;
+  const setMarginZero_login = currentPath === "/login" && windowWidth < 400;
+  const hideElement_signup = currentPath === "/signup" && windowWidth < 400;
+  const setMarginZero_signup = currentPath === "/signup" && windowWidth < 400;
+
+
   return (
     <nav className='Navbar'>
       
@@ -60,8 +82,8 @@ const Navbar = () => {
           </div>
 
           {!localStorage.getItem("token") ? <ul className='nav-ul'>
-            <li className='nav-li'><Link to="/login" className={`a a-login ${location.pathname === "/login" ? "white" : ""}`}>Log In</Link></li>
-            <li className='nav-li'><Link to="/signup" className={`a a-signup ${location.pathname === "/signup" ? "white" : ""}`}>Sign Up</Link></li>
+            <li className='nav-li'><Link to="/login" className={`a a-login ${location.pathname === "/login" ? "white" : ""}` } style={{ display: hideElement_login ? 'none' : 'block' , margin: hideElement_signup ? '0' : '' }}>Log In</Link></li>
+            <li className='nav-li'><Link to="/signup" className={`a a-signup ${location.pathname === "/signup" ? "white" : ""}`}style={{ margin: hideElement_login ? '0' : '', display: hideElement_signup ? 'none' : 'block' }}>Sign Up</Link></li>
           </ul> :
             <span className='dropdown-user-cont'>
               <div className='dropdown-user' tabIndex={1}>
