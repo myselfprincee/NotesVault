@@ -1195,7 +1195,7 @@ hr {
 
 }
 
-@media screen and (min-width: 399px) and (max-width: 600px) {
+@media screen and (min-width: 367px) and (max-width: 600px) {
     .input-label input {
         width: 60vw;
     }
