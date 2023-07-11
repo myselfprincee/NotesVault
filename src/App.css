@@ -2427,8 +2427,9 @@ hr {
 
 @media screen and (min-width: 0px) and (max-width: 398px) {
     .links-dropdown {
-        width: 135%;
+        width: 190%;
         font-size: 13px;
+        padding: 10px;
     }
 
     .links {
