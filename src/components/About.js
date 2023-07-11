@@ -8,7 +8,7 @@ export default function About() {
   return (
     <>
     <Helmet>
-      <title>About - notesVault.tk</title>
+      <title>About The Creator - Notesvault</title>
       <meta name='description' content='About the Maker of The Notesvault' />
       <link rel="canonical" href="/about" />
     </Helmet>

@@ -55,7 +55,7 @@ export default function Login() {
     <>
       {/* <Signup method="Login" ormethod="SIGNUP" methodlink="/signup" methoddisplay="none" onSubmit={handleSubmit}/> */}
       <Helmet>
-      <title>Login - notesVault.tk</title>
+      <title>Login - Notesvault</title>
       <meta name='description' content='Registered User - Login Now and access your notes !' />
       <link rel="canonical" href="/login" />
     </Helmet>
