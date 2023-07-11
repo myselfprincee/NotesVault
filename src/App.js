@@ -1,8 +1,9 @@
 import './App.css';
-import axios from 'axios';
+import React from 'react';
+// import axios from 'axios';
 import {
   createBrowserRouter,
-  RouterProvider, Routes, Route
+  RouterProvider, Routes, Route, Router
 } from "react-router-dom";
 import About from './components/About';
 import Contact from './components/Contact';
@@ -13,15 +14,17 @@ import Home from './components/Home';
 import Notes from './components/Notes';
 import Navbar from './components/Navbar';
 import Footer from './components/Footer';
-import { useEffect } from 'react';
+// import { useEffect } from 'react';
 // import {  useState } from 'react';
 import { Analytics } from '@vercel/analytics/react';
+import Loader from './components/Loader';
+import { Suspense } from 'react';
 
 
 
 function App() {
 
-  // const [loading, setLoading] = useState(true);
+  // const [loading, setLoading] = React.useState(true);
   // const [data, setData] = useState(null);
 
   const router = createBrowserRouter([
@@ -54,9 +57,12 @@ function App() {
 
 
   return (
-    <>
-        <RouterProvider router={router} rel="preload">
-          <Navbar />
+
+    <Suspense fallback={<Loader/>}>
+
+      <RouterProvider router={router} rel="preload">
+        <Navbar />
+        <Router>
           <Routes>
             <Route path="/" exact component={Home} />
             <Route path="/about" exact component={About} />
@@ -66,11 +72,12 @@ function App() {
             <Route path="/notes" exact component={Notes} />
             <Route path="*" exact component={ErrorPage} />
           </Routes>
-          <Footer />
-        </RouterProvider>   
-
+        </Router>
+        <Footer />
+      </RouterProvider>
       <Analytics mode={'production'} />
-    </>
+
+    </Suspense>
   )
 }
 

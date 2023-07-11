@@ -1,4 +1,4 @@
-import React from 'react'
+import React, {Suspense} from 'react'
 import { Link } from 'react-router-dom'
 import Navbar from './Navbar'
 import Footer from './Footer';
@@ -23,14 +23,17 @@ import macbook from "../images/laptop version.webp";
 import facepalming from "../images/man facepalming.png";
 import check from "../images/checkok.png"
 import { Helmet } from 'react-helmet-async';
+import Loader from './Loader';
 
 
 const Home = () => {
 
+
   return (
-    <>
+    
+    <Suspense fallback={<Loader/>}> 
     <Helmet>
-      <title>Home - notesVault.tk</title>
+      <title>NotesVault - Notes Make Easy</title>
       <meta name='description' content='Discover Notesvault' />
       <link rel="canonical" href="/" />
     </Helmet>
@@ -122,8 +125,8 @@ const Home = () => {
         <img className='man-right' src={facepalming} alt="" draggable="false" />
       </div>
       <Footer />
-
-    </>
+      </Suspense>
+    
   )
 }
 

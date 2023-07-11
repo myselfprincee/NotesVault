@@ -1589,12 +1589,13 @@ hr {
         margin: 4rem auto;
         font-family: "Melody-md";
         margin-bottom: 10px;
+        margin-top: 2rem;
         text-align: center;
     }
 
     .intro-text-sec {
         transform: translateX(0);
-        margin: 10px auto;
+        margin: 24px auto;
     }
 
     .hi,

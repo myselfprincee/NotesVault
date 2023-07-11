@@ -20,11 +20,11 @@ export const reportWebVitals = (onPerfEntry) => {
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
   <React.StrictMode>
-    <Suspense  fallback={<Loader/>}>
     <HelmetProvider>
-      <App />
+      <Suspense fallback={<Loader/>}>
+        < App />
+ </Suspense>
     </HelmetProvider>
-    </Suspense>
   </React.StrictMode>
 
 );
