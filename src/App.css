@@ -1589,7 +1589,6 @@ hr {
         margin: 4rem auto;
         font-family: "Melody-md";
         margin-bottom: 10px;
-        margin-top: 2rem;
         text-align: center;
     }
 
@@ -1766,6 +1765,7 @@ hr {
 
     .intro {
         margin: .3rem;
+        margin-top: 2rem;
     }
 
     .nav-ul {
