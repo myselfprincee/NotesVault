@@ -82,8 +82,8 @@ const Navbar = () => {
           </div>
 
           {!localStorage.getItem("token") ? <ul className='nav-ul'>
-            <li className='nav-li'><Link to="/login" className={`a a-login ${location.pathname === "/login" ? "white" : ""}` } style={{ display: hideElement_login ? 'none' : 'block' , margin: hideElement_signup ? '0' : '' }}>Log In</Link></li>
-            <li className='nav-li'><Link to="/signup" className={`a a-signup ${location.pathname === "/signup" ? "white" : ""}`}style={{ margin: hideElement_login ? '0' : '', display: hideElement_signup ? 'none' : 'block' }}>Sign Up</Link></li>
+            <li className='nav-li'><Link to="/login" className={`a a-login ${location.pathname === "/login" ? "white" : ""}` } style={{ display: hideElement_login ? 'none' : 'block' , margin: setMarginZero_signup ? '0' : '' }}>Log In</Link></li>
+            <li className='nav-li'><Link to="/signup" className={`a a-signup ${location.pathname === "/signup" ? "white" : ""}`}style={{ margin: setMarginZero_login ? '0' : '', display: hideElement_signup ? 'none' : 'block' }}>Sign Up</Link></li>
           </ul> :
             <span className='dropdown-user-cont'>
               <div className='dropdown-user' tabIndex={1}>
