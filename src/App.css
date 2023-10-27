@@ -920,7 +920,7 @@ hr {
 
 .notes-box {
     display: flex;
-    flex-direction: column;
+    flex-direction: row-reverse;
     flex-wrap: wrap;
     margin-left: 40px;
     margin-right: 40px;
