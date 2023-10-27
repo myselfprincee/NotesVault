@@ -124,6 +124,7 @@ h1 {
     padding: 10px 0px;
     outline: none;
     border: none;
+    cursor: pointer;
     justify-content: center;
 
     border-radius: 20px;
@@ -241,7 +242,7 @@ hr {
 }
 
 .a-signup {
-    padding: 9px;
+    padding: 7px;
 }
 
 .btn-container {
@@ -2500,4 +2501,21 @@ cursor {
 
 .addnoteContainer {
     margin-top: 5rem;
+}
+
+.notification{
+    height: 4rem;
+    top: 80%;
+    width: 10rem;
+    left: 70%;
+}
+
+
+.footer-Links{
+    text-decoration: none;
+    color: white;
+}
+
+.footer-Links:hover{
+    text-decoration: underline;
 }
