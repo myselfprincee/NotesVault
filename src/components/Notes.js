@@ -1,7 +1,6 @@
 import React from 'react'
 import NoteState from '../context/notes/NoteState'
-import Alert from './Alert'
-
+import { Toaster, toast } from 'sonner'
 
 export const NoteContext = React.createContext()
 
@@ -12,7 +11,6 @@ export default function About() {;
   const notesInitial = []
 
   const [notes, setNotes] = React.useState(notesInitial);
-  const [alert, setAlert] = React.useState(null);
    
 
   //get all notes 
@@ -48,8 +46,9 @@ export default function About() {;
     });
     const note = await response.json()
     setNotes(notes.concat(note))
-    setAlert({ type: 'Success', message: "Note Added successfully"});
-    setTimeout(() => setAlert(null), 1000);
+    toast.success("Note has been Added successfully", {
+      duration: 1000,
+    });
   }
     
     
@@ -66,13 +65,13 @@ export default function About() {;
       },
       body: JSON.stringify({id})
     })
-    const json =  response.json();
-    setAlert({ type: 'Success', message: "Note Deleted successfully"});
-    setTimeout(() => setAlert(null), 500);
-    console.log(json)
+    response.json();
+    toast.success("Note has been Deleted successfully", {
+      duration: 1000,
+    });
 
     //Logic to Delete the Note
-    console.log("deleting the note with id" + id)
+    // console.log("deleting the note with id" + id)
     const newNotes = notes.filter((note) => { return note._id !== id })
     setNotes(newNotes)
   }
@@ -88,10 +87,10 @@ export default function About() {;
       },
       body: JSON.stringify({title, description, tag})
     })
-    const json =  response.json();
-    setAlert({ type: 'Success', message: "Note Edited successfully"});
-    setTimeout(() => setAlert(null), 500);
-    console.log(json);
+    response.json();
+    toast.success("Note has been Edited successfully", {
+      duration: 1000,
+    });
 
     let newNotes = JSON.parse(JSON.stringify(notes))
     //LOGIC TO EDIT THE NOTE
@@ -111,7 +110,12 @@ export default function About() {;
     <div>
 
       <NoteContext.Provider value={{ notes, addNote , deleteNote, editNote, getNotes}}>
-      {alert && <Alert type={alert.type} message={alert.message} />}
+      <Toaster
+      richColors
+      className="notification"
+      position="bottom-right"
+      expand={false}
+      />
         <NoteState/>
       </NoteContext.Provider>
     </div>

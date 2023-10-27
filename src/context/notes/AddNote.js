@@ -1,5 +1,5 @@
 import React, { useState } from 'react'
-import Alert from '../../components/Alert';
+import { Toaster, toast } from 'sonner'
 import { NoteContext } from '../../components/Notes'
 
 
@@ -15,7 +15,9 @@ export default function AddNote(props) {
     e.preventDefault();
     addNote(note.title, note.description, note.tag);
     setNote({ title: "", description: "", tag: "" });
-    <Alert showAlert="Note Has been Added Successfully"/> 
+    toast.success("Note has been Added successfully", {
+      duration: 1000,
+    });
   }
 
   const onChange = (e) => {
@@ -27,7 +29,12 @@ export default function AddNote(props) {
   
   return (
     <>
-    { alert && <Alert messege="Note Has been Added Successfully"/>}
+    <Toaster
+      richColors
+      className="notification"
+      position="bottom-right"
+      expand={false}
+      />
     <div className="Notescontainer">
       <div className='addnoteContainer'>
         <div style={{ display: 'flex', flexDirection: "row" }}>
