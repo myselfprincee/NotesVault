@@ -107,9 +107,8 @@ export default function Signup(props) {
                 /> */}
                 <input
                   type="text"
-                  name="name"
+                  {...register("name", { required: true, maxLength: 80 })}
                   id="name"
-                  {...register("Name", { required: true, maxLength: 80 })}
                 />
               </div>
 
@@ -127,10 +126,9 @@ export default function Signup(props) {
                 /> */}
                 <input
                   type="email"
-                  name="email"
+                  {...register("email", { required: true })}
                   id="email"
                   required
-                  {...register("exampleRequired", { required: true })}
                 />
                 {errors.exampleRequired && <span>This field is required</span>}
               </div>
