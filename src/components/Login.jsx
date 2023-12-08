@@ -24,8 +24,7 @@ export default function Login() {
     setState((prevstate) => !prevstate);
   };
 
-  const handleLogin = async (e) => {
-    e.preventDefault();
+  const handleLogin = async () => {
     const response = await fetch(
       `${process.env.REACT_APP_DATABASE_URL}/auth/login`,
       {
@@ -61,12 +60,11 @@ export default function Login() {
 
   return (
     <>
-      {/* <Signup method="Login" ormethod="SIGNUP" methodlink="/signup" methoddisplay="none" onSubmit={handleSubmit}/> */}
       <Helmet>
         <title>Login - Notesvault</title>
         <meta
           name="description"
-          content="Registered User - Login Now and access your notes !"
+          content="Login Now and access your notes !"
         />
         <link rel="canonical" href="/login" />
       </Helmet>
