@@ -39,7 +39,6 @@ export default function Login() {
       }
     );
     const json = await response.json();
-    console.log(json);
     if (json.success) {
       // the auth token to local storge
       localStorage.setItem("token", json.authtoken);
