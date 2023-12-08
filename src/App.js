@@ -14,18 +14,12 @@ import Home from './components/Home';
 import Notes from './components/Notes';
 import Navbar from './components/Navbar';
 import Footer from './components/Footer';
-// import { useEffect } from 'react';
-// import {  useState } from 'react';
 import { Analytics } from '@vercel/analytics/react';
-import Loader from './components/Loader';
-import { Suspense } from 'react';
+import { SpeedInsights } from "@vercel/speed-insights/next"
 
 
 
 function App() {
-
-  // const [loading, setLoading] = React.useState(true);
-  // const [data, setData] = useState(null);
 
   const router = createBrowserRouter([
     {
@@ -57,9 +51,7 @@ function App() {
 
 
   return (
-
-    <Suspense fallback={<Loader/>}>
-
+    <>
       <RouterProvider router={router} rel="preload">
         <Navbar />
         <Router>
@@ -73,11 +65,11 @@ function App() {
             <Route path="*" exact component={ErrorPage} />
           </Routes>
         </Router>
+        <SpeedInsights />
         <Footer />
       </RouterProvider>
       <Analytics mode={'production'} />
-
-    </Suspense>
+    </>
   )
 }
 
