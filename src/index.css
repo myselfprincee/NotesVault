@@ -1,0 +1,29 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer utilities {
+    /* Hide scrollbar for Chrome, Safari and Opera */
+    .no-scrollbar::-webkit-scrollbar {
+        display: none;
+    }
+   /* Hide scrollbar for IE, Edge and Firefox */
+    .no-scrollbar {
+        -ms-overflow-style: none;  /* IE and Edge */
+        scrollbar-width: none;  /* Firefox */
+  }
+}
+
+@layer components {
+    .btn {
+      @apply bg-[#8ae595] hover:bg-[#61a869] text-black font-bold py-2 px-4 rounded-full bg-gradient-linear from-green-gradient-start to-green-gradient-end pt-1 pb-0.5 ;
+    }
+
+    .btn-m {
+      @apply bg-[#8ae595] hover:bg-[#61a869] hover:text-white text-black font-bold py-2 px-4 rounded-full bg-gradient-linear pt-1 pb-0.5 border-2  ;
+    }
+
+    .nav-btn {
+      @apply bg-[#8ae595] text-white py-1.5 transition-all rounded-full px-3 ;
+    }
+  }
