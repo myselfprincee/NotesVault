@@ -1,24 +1,37 @@
 @font-face {
     font-family: "Melody";
+<<<<<<< HEAD
     src: url("../src/fonts/BLMelody-Bold.otf");
+=======
+    src: url("src/fonts/BLMelody-Bold.otf");
+>>>>>>> notesvault-newest/main
     font-display: swap;
 }
 
 @font-face {
     font-family: "Melody-md";
+<<<<<<< HEAD
     src: url("../src/fonts/BLMelody-Medium.otf");
+=======
+    src: url("fonts/BLMelody-Medium.otf");
+>>>>>>> notesvault-newest/main
     font-display: swap;
 }
 
 @font-face {
     font-family: "Melody-regular";
+<<<<<<< HEAD
     src: url("../src/fonts/BLMelody-Regular.otf");
+=======
+    src: url("fonts/BLMelody-Regular.otf");
+>>>>>>> notesvault-newest/main
     font-display: swap;
 }
 
 
 * {
     font-family: 'Melody-md';
+<<<<<<< HEAD
     top: 0;
     left: 0;
 
@@ -28,6 +41,13 @@
 
 html {
     height: 100vh;
+=======
+
+}
+
+html {
+    /* height: 100vh; */
+>>>>>>> notesvault-newest/main
     scroll-behavior: smooth;
     scroll-snap-type: mandatory;
 }
@@ -100,10 +120,13 @@ h1 {
     margin: 0;
 }
 
+<<<<<<< HEAD
 .eye {
     margin-left: -20px;
 }
 
+=======
+>>>>>>> notesvault-newest/main
 .input-label {
     margin: 10px 0;
 }
@@ -124,7 +147,10 @@ h1 {
     padding: 10px 0px;
     outline: none;
     border: none;
+<<<<<<< HEAD
     cursor: pointer;
+=======
+>>>>>>> notesvault-newest/main
     justify-content: center;
 
     border-radius: 20px;
@@ -213,12 +239,17 @@ hr {
 
 .nav-ul {
     display: flex;
+<<<<<<< HEAD
     margin: 20px 0px;
+=======
+    margin: 20px 20px;
+>>>>>>> notesvault-newest/main
     justify-content: center;
     flex-direction: row;
     align-items: center;
 }
 
+<<<<<<< HEAD
 .nav-li {
 
     list-style: none;
@@ -229,6 +260,9 @@ hr {
 
 .a {
     margin-left: -15px;
+=======
+.a {
+>>>>>>> notesvault-newest/main
     background-color: #8ae595;
     text-decoration: none;
     color: white;
@@ -241,10 +275,13 @@ hr {
 
 }
 
+<<<<<<< HEAD
 .a-signup {
     padding: 7px;
 }
 
+=======
+>>>>>>> notesvault-newest/main
 .btn-container {
     display: flex;
     flex-direction: row;
@@ -268,11 +305,14 @@ hr {
 
 }
 
+<<<<<<< HEAD
 .span-qualities {
     display: flex;
     align-items: center;
 }
 
+=======
+>>>>>>> notesvault-newest/main
 .ul-container {
     display: flex;
     justify-content: space-between;
@@ -340,7 +380,11 @@ hr {
     box-shadow: 0px 2px 5px 1px rgba(0, 0, 0, 0.1);
     position: absolute;
     top: calc(100% + 0.2rem);
+<<<<<<< HEAD
     width: 110%;
+=======
+    width: max-contentz;
+>>>>>>> notesvault-newest/main
     padding: 10px;
     background-color: #8ae595;
     opacity: 0;
@@ -349,6 +393,7 @@ hr {
 
 }
 
+<<<<<<< HEAD
 .links-dropdown a {
     font-size: 15px;
     text-decoration: none;
@@ -360,6 +405,8 @@ hr {
     margin-top: 10px;
 }
 
+=======
+>>>>>>> notesvault-newest/main
 .dropdown:focus-within>.links {
     background-color: #8ae595;
     color: white;
@@ -420,7 +467,10 @@ hr {
     position: absolute;
     left: -100px;
     padding: 10px;
+<<<<<<< HEAD
     background-color: #8ae595;
+=======
+>>>>>>> notesvault-newest/main
     opacity: 0;
     pointer-events: none;
     transform: translateY(-20px);
@@ -468,7 +518,10 @@ hr {
     width: 200px;
     margin-right: 60px;
     padding: 10px;
+<<<<<<< HEAD
     background-color: #8ae595;
+=======
+>>>>>>> notesvault-newest/main
     position: absolute;
     opacity: 0;
     pointer-events: none;
@@ -479,7 +532,10 @@ hr {
     display: flex;
     margin: 0;
     padding: 5px;
+<<<<<<< HEAD
     color: white;
+=======
+>>>>>>> notesvault-newest/main
     word-wrap: break-word;
 }
 
@@ -488,6 +544,7 @@ hr {
 
 /* HOME COMPONENT */
 
+<<<<<<< HEAD
 .verified-spans {
     display: flex;
     flex-direction: row;
@@ -499,6 +556,8 @@ hr {
     margin-bottom: 30px;
 
 }
+=======
+>>>>>>> notesvault-newest/main
 
 ::selection {
     color: white;
@@ -676,9 +735,12 @@ hr {
     image-rendering: optimizeSpeed;
     object-fit: cover;
     object-position: 55% 0px;
+<<<<<<< HEAD
 
 
 
+=======
+>>>>>>> notesvault-newest/main
 }
 
 .card:hover .card-img {
@@ -687,7 +749,11 @@ hr {
     overflow: hidden;
     transition: all;
     transition-duration: 400ms;
+<<<<<<< HEAD
     transition-delay: 80ms;
+=======
+    transition-delay: 100ms;
+>>>>>>> notesvault-newest/main
 }
 
 .card:not(:hover) .card-img {
@@ -778,6 +844,7 @@ hr {
 }
 
 .card {
+<<<<<<< HEAD
     cursor: pointer;
     display: inline-flex;
     justify-content: space-around;
@@ -787,11 +854,17 @@ hr {
     align-items: center;
     background-color: white;
     padding: 7px;
+=======
+    justify-content: space-around;
+    min-width: 310px;
+    align-items: center;
+>>>>>>> notesvault-newest/main
     padding-right: 19px;
     overflow: hidden;
     border-radius: 30px;
     border-bottom-right-radius: 0px;
     box-shadow: rgba(0, 0, 0, 0.12) 0px 0px 0px 1px;
+<<<<<<< HEAD
     margin-bottom: 2rem;
 }
 
@@ -802,6 +875,8 @@ hr {
     margin: 0;
     font-size: .9rem;
     font-family: "Melody-regular";
+=======
+>>>>>>> notesvault-newest/main
 }
 
 
@@ -863,9 +938,18 @@ hr {
     color: #8ae595;
     text-shadow: #000 1px 0.5px 0.3px;
     border-bottom: 3px dashed #8ae595;
+<<<<<<< HEAD
     display: inline-flex;
     font-size: 35px;
     margin-left: 100px;
+=======
+    display: block;
+    width: fit-content;
+    margin: auto;
+    text-align: center;
+    font-size: 35px;
+    text-align: center;
+>>>>>>> notesvault-newest/main
     margin-top: 50px;
 }
 
@@ -883,6 +967,7 @@ hr {
     margin-top: 100px;
 }
 
+<<<<<<< HEAD
 .logout {
     display: flex;
     cursor: pointer;
@@ -891,6 +976,8 @@ hr {
 
 
 
+=======
+>>>>>>> notesvault-newest/main
 
 /* NotesITEM */
 
@@ -900,7 +987,11 @@ hr {
     font-size: 12px;
     padding-left: 15px;
     padding-right: 15px;
+<<<<<<< HEAD
     margin: 10px;
+=======
+    margin-left: 7px;
+>>>>>>> notesvault-newest/main
     border-radius: 20px;
     font-style: italic;
     font-weight: bold;
@@ -909,21 +1000,41 @@ hr {
 
 .note-title {
     margin: 10px;
+<<<<<<< HEAD
+=======
+    word-break: break-word;
+>>>>>>> notesvault-newest/main
 }
 
 .note-description {
     margin: 10px;
+<<<<<<< HEAD
     white-space: pre-wrap;
     word-wrap: break-word;
+=======
+    white-space: pre;
+    text-wrap: wrap;
+>>>>>>> notesvault-newest/main
 
 }
 
 .notes-box {
     display: flex;
+<<<<<<< HEAD
     flex-direction: row-reverse;
     flex-wrap: wrap;
     margin-left: 40px;
     margin-right: 40px;
+=======
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+    /* margin-left: 40px; */
+    /* margin-right: 40px; */
+    overflow-x: hidden;
+    width: fit-content;
+    margin: auto;
+>>>>>>> notesvault-newest/main
 
 
 }
@@ -972,6 +1083,7 @@ hr {
     margin-top: 2px;
 }
 
+<<<<<<< HEAD
 /* ALERT COMPONENT */
 .alert-container {
     position: fixed;
@@ -1006,10 +1118,13 @@ hr {
     font-weight: 600;
 }
 
+=======
+>>>>>>> notesvault-newest/main
 
 /* EDITNOTE COMPONENT */
 
 
+<<<<<<< HEAD
 .Modal {
     background-color: white;
     border-radius: 20px;
@@ -1030,21 +1145,60 @@ hr {
     width: 80%;
     outline: none;
     background-color: rgb(241, 240, 240);
+=======
+
+
+@media screen and (min-width: 0px) and (max-width: 698px) {
+
+    .Modal-form {
+        margin: 0;
+        padding: 0;
+        width: 75%;
+        /* margin: auto; */
+    }
+
+    .notes-box {
+        margin-bottom: 20px;
+    }
+
+    
+
+}
+
+#etitle {
+    width: 100%;
+    outline: none;
+    background-color: rgb(241, 240, 240);
+    border-radius: 6px;
+>>>>>>> notesvault-newest/main
     border: none;
     padding: 10px;
 }
 
 #etag {
+<<<<<<< HEAD
     width: 80%;
     outline: none;
     background-color: rgb(241, 240, 240);
+=======
+    width: 100%;
+    outline: none;
+    background-color: rgb(241, 240, 240);
+    border-radius: 6px;
+>>>>>>> notesvault-newest/main
     border: none;
     padding: 10px;
 }
 
 #edescription {
     margin-top: 10px;
+<<<<<<< HEAD
     width: 80%;
+=======
+    width: 100%;
+    resize: none;
+    border-radius: 6px;
+>>>>>>> notesvault-newest/main
     padding-top: 40px;
     padding-bottom: 40px;
     padding-left: 18px;
@@ -1077,6 +1231,10 @@ hr {
     font-size: 18px;
     padding: 10px 15px;
     color: white;
+<<<<<<< HEAD
+=======
+    cursor: pointer;
+>>>>>>> notesvault-newest/main
     border-radius: 50px;
 }
 
@@ -1109,11 +1267,14 @@ hr {
     }
 
     .ul-container {
+<<<<<<< HEAD
         width: 100%;
     }
 
     .ul-container {
         width: 68%;
+=======
+>>>>>>> notesvault-newest/main
         align-items: center;
     }
 
@@ -1132,16 +1293,29 @@ hr {
         justify-content: space-between;
     }
 
+<<<<<<< HEAD
     .signup-btn {
         width: 100px;
     }
 
+=======
+>>>>>>> notesvault-newest/main
     .addnoteContainer {
         width: 80%;
         margin: auto;
 
     }
 
+<<<<<<< HEAD
+=======
+    .notes-box {
+        display: flex;
+        justify-content: center;
+        flex-direction: column;
+
+    }
+
+>>>>>>> notesvault-newest/main
     .edit-btn {
         font-size: 12px;
         margin: 5px;
@@ -1184,6 +1358,25 @@ hr {
         font-size: 14px;
     }
 
+<<<<<<< HEAD
+=======
+    #etitle {
+        padding: 15px;
+        font-family: "Melody-md";
+        font-size: 18.72px;
+    }
+
+    #etag {
+        font-size: 16px;
+        padding: 15px;
+    }
+
+    #edescription {
+        font-size: 16px;
+        padding: 15px;
+        height: 9rem;
+    }
+>>>>>>> notesvault-newest/main
 }
 
 @media screen and (min-width: 367px) and (max-width: 600px) {
@@ -1219,6 +1412,48 @@ hr {
     .signupcontainer {
         margin-top: 80px;
     }
+<<<<<<< HEAD
+=======
+
+    .notes-box {
+        display: flex;
+        justify-content: center;
+        flex-direction: column;
+
+    }
+
+
+    .Alert {
+        position: fixed;
+        display: flex;
+        width: 85%;
+        margin-left: 26px;
+        justify-content: space-evenly;
+    }
+
+
+
+    .alert-msg {
+        font-size: 14px;
+    }
+}
+
+@media screen and (min-width: 470px) and (max-width: 600px) {
+    .alert-container {
+        display: flex;
+        margin: auto;
+        justify-content: right;
+        align-items: center;
+    }
+
+    .Alert {
+        position: fixed;
+        display: flex;
+        width: 75%;
+
+        justify-content: space-evenly;
+    }
+>>>>>>> notesvault-newest/main
 }
 
 @media screen and (min-width: 601px) and (max-width: 900px) {
@@ -1306,6 +1541,20 @@ hr {
     }
 }
 
+<<<<<<< HEAD
+=======
+.Error {
+    background-color: rgb(248, 137, 137);
+    border: 2px solid red;
+    color: white;
+    text-decoration: none;
+}
+
+.text-Error {
+    color: rgb(144, 11, 11);
+}
+
+>>>>>>> notesvault-newest/main
 .proofs-need span {
     margin-top: 6rem;
 }
@@ -1339,10 +1588,13 @@ hr {
     height: 10rem;
 }
 
+<<<<<<< HEAD
 .h3s-of-proofs {
     display: flex;
     flex-direction: column;
 }
+=======
+>>>>>>> notesvault-newest/main
 
 .proofs-need {
     display: flex;
@@ -1376,6 +1628,7 @@ hr {
     justify-content: space-between;
 }
 
+<<<<<<< HEAD
 
 .man-left {
     margin-top: 6rem;
@@ -1403,6 +1656,8 @@ hr {
     margin-top: 0rem;
 }
 
+=======
+>>>>>>> notesvault-newest/main
 .footer-section {
     background: #a1ebaa;
     color: white;
@@ -1701,9 +1956,12 @@ hr {
         color: #8ae595;
     }
 
+<<<<<<< HEAD
     .links-dropdown {
         width: 130%;
     }
+=======
+>>>>>>> notesvault-newest/main
 
     .intro {
         margin: .3rem;
@@ -1714,9 +1972,12 @@ hr {
         margin: 10px 0;
     }
 
+<<<<<<< HEAD
     .a-signup {
         padding: 7px;
     }
+=======
+>>>>>>> notesvault-newest/main
 
     .review-heading {
         margin-top: 0px;
@@ -1753,11 +2014,14 @@ hr {
     .iphone {
         width: 6rem;
     }
+<<<<<<< HEAD
 
     .a-login {
         display: none;
     }
 
+=======
+>>>>>>> notesvault-newest/main
 }
 
 @media only screen and (min-width:801px) and (max-width:1240px) {
@@ -1765,10 +2029,13 @@ hr {
         overflow: hidden;
     }
 
+<<<<<<< HEAD
     .links-dropdown {
         width: 120%;
     }
 
+=======
+>>>>>>> notesvault-newest/main
     .links {
         transform: translateX(-10px);
 
@@ -2083,6 +2350,7 @@ hr {
     align-items: center;
 }
 
+<<<<<<< HEAD
 .about-text {
     font-family: Melody-regular;
     font-weight: 500;
@@ -2093,6 +2361,8 @@ hr {
     border-radius: 20px;
     object-fit: cover;
 }
+=======
+>>>>>>> notesvault-newest/main
 
 /* --------------------------------------------- */
 
@@ -2262,6 +2532,7 @@ hr {
     .para-img-cont {
         flex-direction: column-reverse;
     }
+<<<<<<< HEAD
 
     .about-text {
         width: 90%;
@@ -2283,6 +2554,8 @@ hr {
         color: black;
         margin-left: 2rem;
     }
+=======
+>>>>>>> notesvault-newest/main
 }
 
 
@@ -2303,11 +2576,14 @@ hr {
 
 }
 
+<<<<<<< HEAD
 .logout {
     font-family: "Melody-regular";
     font-weight: 500;
 }
 
+=======
+>>>>>>> notesvault-newest/main
 
 
 .dropdown-user {
@@ -2368,6 +2644,7 @@ hr {
 }
 
 @media screen and (min-width: 0px) and (max-width: 398px) {
+<<<<<<< HEAD
     .links-dropdown {
         width: 190%;
         font-size: 13px;
@@ -2390,6 +2667,12 @@ hr {
     .a-login {
         margin-right: 20px;
     }
+=======
+
+    .links {
+        transform: translateX(-40px);
+    }   
+>>>>>>> notesvault-newest/main
 
     .macbook {
         width: 100vw;
@@ -2441,6 +2724,7 @@ cursor {
 
 
 .addnoteContainer {
+<<<<<<< HEAD
     margin-top: 5rem;
 }
 
@@ -2459,4 +2743,124 @@ cursor {
 
 .footer-Links:hover{
     text-decoration: underline;
+=======
+    margin-top: 2rem;
+}
+
+.my-toast {
+    top: 20%;
+    height: 4rem;
+    border-radius: 20px;
+}
+
+
+.my-masonry-grid {
+    display: -webkit-box;
+    /* Not needed if autoprefixing */
+    display: -ms-flexbox;
+    /* Not needed if autoprefixing */
+    display: flex;
+    /* gutter size offset */
+    /* width: 95%; */
+    margin-right: 30px;
+    margin-left: -10px;
+}
+
+.my-masonry-grid_column {
+    padding-left: 30px;
+    /* gutter size */
+    background-clip: padding-box;
+}
+
+/* Style your items */
+.my-masonry-grid_column>div {
+    /* change div to reference your elements you put in <Masonry> */
+    margin-bottom: 30px;
+}
+
+.icons8-delete {
+    display: inline-block;
+    width: 30px;
+    height: 30px;
+    background: url('data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHg9IjBweCIgeT0iMHB4IiB3aWR0aD0iMzAiIGhlaWdodD0iMzAiIHZpZXdCb3g9IjAsMCwyNTYsMjU2IgpzdHlsZT0iZmlsbDojMDAwMDAwOyI+CjxnIGZpbGw9IiNmZjJkMmQiIGZpbGwtcnVsZT0ibm9uemVybyIgc3Ryb2tlPSJub25lIiBzdHJva2Utd2lkdGg9IjEiIHN0cm9rZS1saW5lY2FwPSJidXR0IiBzdHJva2UtbGluZWpvaW49Im1pdGVyIiBzdHJva2UtbWl0ZXJsaW1pdD0iMTAiIHN0cm9rZS1kYXNoYXJyYXk9IiIgc3Ryb2tlLWRhc2hvZmZzZXQ9IjAiIGZvbnQtZmFtaWx5PSJub25lIiBmb250LXdlaWdodD0ibm9uZSIgZm9udC1zaXplPSJub25lIiB0ZXh0LWFuY2hvcj0ibm9uZSIgc3R5bGU9Im1peC1ibGVuZC1tb2RlOiBub3JtYWwiPjxnIHRyYW5zZm9ybT0ic2NhbGUoOC41MzMzMyw4LjUzMzMzKSI+PHBhdGggZD0iTTE0Ljk4NDM4LDIuNDg2MzNjLTAuNTUxNTIsMC4wMDg2MiAtMC45OTE5MywwLjQ2MjE0IC0wLjk4NDM3LDEuMDEzNjd2MC41aC01LjVjLTAuMjY3NTcsLTAuMDAzNjMgLTAuNTI1NDMsMC4xMDAxMiAtMC43MTU5MywwLjI4ODA1Yy0wLjE5MDUsMC4xODc5MyAtMC4yOTc3NCwwLjQ0NDM2IC0wLjI5Nzc0LDAuNzExOTVoLTEuNDg2MzNjLTAuMzYwNjQsLTAuMDA1MSAtMC42OTYwOCwwLjE4NDM4IC0wLjg3Nzg5LDAuNDk1ODdjLTAuMTgxODEsMC4zMTE1IC0wLjE4MTgxLDAuNjk2NzYgMCwxLjAwODI1YzAuMTgxODEsMC4zMTE1IDAuNTE3MjUsMC41MDA5NyAwLjg3Nzg5LDAuNDk1ODdoMThjMC4zNjA2NCwwLjAwNTEgMC42OTYwOCwtMC4xODQzOCAwLjg3Nzg5LC0wLjQ5NTg3YzAuMTgxODEsLTAuMzExNSAwLjE4MTgxLC0wLjY5Njc2IDAsLTEuMDA4MjVjLTAuMTgxODEsLTAuMzExNSAtMC41MTcyNSwtMC41MDA5NyAtMC44Nzc4OSwtMC40OTU4N2gtMS40ODYzM2MwLC0wLjI2NzU5IC0wLjEwNzI0LC0wLjUyNDAzIC0wLjI5Nzc0LC0wLjcxMTk1Yy0wLjE5MDUsLTAuMTg3OTMgLTAuNDQ4MzYsLTAuMjkxNjggLTAuNzE1OTMsLTAuMjg4MDVoLTUuNXYtMC41YzAuMDAzNywtMC4yNzAzIC0wLjEwMjE4LC0wLjUzMDU5IC0wLjI5MzUxLC0wLjcyMTU1Yy0wLjE5MTMzLC0wLjE5MDk3IC0wLjQ1MTgyLC0wLjI5NjM0IC0wLjcyMjEyLC0wLjI5MjEyek02LDlsMS43OTI5NywxNS4yMzQzOGMwLjExOCwxLjAwNyAwLjk3MDM3LDEuNzY1NjMgMS45ODQzOCwxLjc2NTYzaDEwLjQ0NTMxYzEuMDE0LDAgMS44NjUzOCwtMC43NTg2MiAxLjk4NDM4LC0xLjc2NTYybDEuNzkyOTcsLTE1LjIzNDM3eiI+PC9wYXRoPjwvZz48L2c+Cjwvc3ZnPg==') 50% 50% no-repeat;
+    background-size: 100%;
+}
+
+.loader .stroke {
+    display: inline-flex;
+    position: relative;
+    background: #f1f1f1;
+    height: 20%;
+    width: 2.5px;
+    border-radius: 50px;
+    margin: 0 1.3px;
+    animation: animate 1.3s cubic-bezier(0, 0, 1, 0.21) infinite 1s;
+    cursor: pointer;
+    transition: all;
+}
+
+@keyframes animate {
+    0% {
+        height: 20%;
+    }
+    10% {
+        height: 50%;
+    }
+
+    50% {
+        height: 90%;
+    }
+    75% {
+        height: 50%;
+    }
+    100% {
+        height: 20%;
+    }
+}
+
+.stroke:nth-child(1) {
+    animation-delay: 1s;
+}
+
+.stroke:nth-child(2) {
+    animation-delay: 1.3s;
+}
+
+.stroke:nth-child(3) {
+    animation-delay: 1.6s;
+}
+
+.stroke:nth-child(4) {
+    animation-delay: 1.9s;
+}
+
+.stroke:nth-child(5) {
+    animation-delay: 1.6s;
+}
+
+.stroke:nth-child(6) {
+    animation-delay: 1.3s;
+}
+
+.stroke:nth-child(7) {
+    animation-delay: 1s;
+}
+
+
+
+input:-webkit-autofill,
+input:-webkit-autofill:hover,
+input:-webkit-autofill:focus,
+textarea:-webkit-autofill,
+textarea:-webkit-autofill:hover,
+textarea:-webkit-autofill:focus,
+select:-webkit-autofill,
+select:-webkit-autofill:hover,
+select:-webkit-autofill:focus {
+  -webkit-box-shadow: 0 0 0px 1000px #ffffff inset !important;
+}
+
+.my-masonry-grid_column{
+    width: 90%;
+>>>>>>> notesvault-newest/main
 }

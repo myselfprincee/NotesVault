@@ -15,7 +15,7 @@ NotesVault is a web application for securely storing and managing your personal 
 To run the NotesVault application locally, follow these steps:
 
 1. Clone the repository: `git clone [repository URL]`
-2. Install the dependencies: `npm install`
+2. Install the dependencies: `npm i`
 3. Configure the database connection in the `.env` file.
 4. Start the server: `npm run start`
 5. Access the application at: `http://localhost:3000`

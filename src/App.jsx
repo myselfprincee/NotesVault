@@ -13,8 +13,6 @@ import Home from './components/Home';
 import Notes from './components/Notes';
 import Navbar from './components/Navbar';
 import Footer from './components/Footer';
-import { Analytics } from '@vercel/analytics/react';
-import { SpeedInsights } from "@vercel/speed-insights/react"
 
 
 
@@ -24,7 +22,7 @@ function App() {
     {
       path: "/",
       element: <Home />,
-      errorElement: <ErrorPage />,
+      errorElement: <ErrorPage />
     },
     {
       path: "/notes",
@@ -50,7 +48,7 @@ function App() {
 
 
   return (
-    <>
+
       <RouterProvider router={router} rel="preload">
         <Navbar />
         <Router>
@@ -64,11 +62,8 @@ function App() {
             <Route path="*" exact component={ErrorPage} />
           </Routes>
         </Router>
-        <SpeedInsights />
         <Footer />
       </RouterProvider>
-      <Analytics mode={'production'} />
-    </>
   )
 }
 
